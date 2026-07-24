@@ -1,0 +1,86 @@
+1.Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
+
+Answer:-
+
+import java.util.Scanner;
+
+public class MaxMinFinder {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int num3 = input.nextInt();
+        printMax(num1, num2, num3);
+        printMin(num1, num2, num3);
+        input.close();
+    }
+
+    public static void printMax(int a, int b, int c) {
+        int max = a;
+        if (b > max) {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+        }
+        System.out.println("Maximum: " + max);
+    }
+
+    public static void printMin(int a, int b, int c) {
+        int min = a;
+        if (b < min) {
+            min = b;
+        }
+        if (c < min) {
+            min = c;
+        }
+        System.out.println("Minimum: " + min);
+    }
+}
+
+2.Define a program to find out whether a given number is even or odd.
+
+Answer:-
+
+import java.util.Scanner;
+
+public class EvenOddMethod {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        checkEvenOdd(number);
+        input.close();
+    }
+
+    public static void checkEvenOdd(int num) {
+        if (num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+
+
+3.A person is eligible to vote if his/her age is greater than or equal to 18. Define a method to find out if he/she is eligible to vote.
+
+Answer:-
+
+import java.util.Scanner;
+
+public class VotingEligibility {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int age = input.nextInt();
+        checkEligibility(age);
+        input.close();
+    }
+
+    public static void checkEligibility(int age) {
+        if (age >= 18) {
+            System.out.println("Eligible to vote");
+        } else {
+            System.out.println("Not eligible to vote");
+        }
+    }
+}
